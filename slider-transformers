@@ -1,0 +1,32 @@
+const buttonLeft = document.querySelector('.buttonLeft');
+const buttonRight = document.querySelector('.buttonRight');
+const sliderLine = document.querySelector('.slider-line');
+
+offset = 0;
+
+document.addEventListener('click', funkButtonLeft);
+
+function funkButtonLeft (event){
+  if(event.target.closest('.buttonLeft')){
+    if(offset == -1400){
+      offset = 350;
+    }
+    offset = offset - 350;
+    sliderLine.style.left = offset + 'px';
+   
+  }
+  
+}
+
+document.addEventListener('click', funkButtonRight);
+
+function funkButtonRight (event){
+  if(event.target.closest('.buttonRight')){
+    if(offset == 0){
+      offset = -1750;
+    }
+    offset = offset + 350;
+    sliderLine.style.left = offset + 'px';
+  }
+  
+}
