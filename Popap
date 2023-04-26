@@ -1,0 +1,23 @@
+const openPopUp = document.getElementById('open_pop_up');
+const closePopUp = document.getElementById('pop_up_close');
+const popUp = document.querySelector('.pop_up');
+
+document.querySelector('.conteiner').addEventListener('click', masha);
+
+function masha(event){
+  event.preventDefault();
+  if(event.target.closest('#open_pop_up')){
+    popUp.classList.add('acktive')
+    }
+  
+  if(event.target.closest('#pop_up_close')){
+    popUp.classList.remove('acktive');
+  }
+}
+popUp.addEventListener('click', dasha) ;
+
+function dasha (event) {
+  if(!event.target.closest('.pop_up_body')){   
+    popUp.classList.remove('acktive') ;
+  }
+}
