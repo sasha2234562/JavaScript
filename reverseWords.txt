@@ -1,0 +1,9 @@
+function reverseWords(str) {
+   let arr = str.split(' ');
+   let arrReverse = [];
+   for(let i of arr) {
+      console.log(i.split('').reverse().join(''));
+arrReverse.push(i.split('').reverse().join(''));
+   }
+   return arrReverse.join(' ');
+ }
