@@ -1,0 +1,26 @@
+function abbreviate(string) { 
+  let splByComma = [];
+  for (sbc of string.split(',')) {
+    let r = sbc.split(' ').map((wr) => {
+      if (wr.indexOf('-') !== -1){
+
+        let wrR = wr.split('-');
+        wrR = wrR.map((wrif) => {
+          if (wrif.length <= 3) {
+            return wrif
+          }
+          return `${wrif[0]}${wrif.length - 2}${wrif[wrif.length - 1]}`
+        })
+
+        wrR = wrR.join('-');
+        return wrR
+      }
+      if (wr.length <= 3) {
+        return wr
+      }
+      return `${wr[0]}${wr.length - 2}${wr[wr.length - 1]}`
+    })
+    splByComma.push(r.join(' '));
+  };
+  return splByComma.join(',');
+}
