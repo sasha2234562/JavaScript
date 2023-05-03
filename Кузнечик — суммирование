@@ -1,0 +1,10 @@
+var summation = function (num) {
+  let i = 1;
+  let arr = [];
+  while(i <= num) {
+   arr.push(i); 
+    i++
+  }
+  let newArr = arr.reduce((a,b) => a + b);
+  return newArr;
+}
