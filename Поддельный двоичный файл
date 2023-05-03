@@ -1,0 +1,11 @@
+function fakeBin(x){
+  let arr = []
+for(let i of x){
+  if(i < 5) {
+    arr.push(0);
+  } else {
+    arr.push(1)
+  }
+}
+return arr.join('');
+}
