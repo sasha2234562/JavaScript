@@ -1,0 +1,11 @@
+function isIsogram(str){
+   let set = new Set();
+   let arr = str.split('');
+   for(let i of arr) {
+     set.add(i.toUpperCase());
+   }
+   if(arr.length == set.size || str == '') {
+     return true
+   }
+   return false
+ }
