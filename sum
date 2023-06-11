@@ -1,0 +1,9 @@
+function sum (numbers) {
+  if(numbers.length === 0) {
+    return 0;
+  } 
+    let s = numbers.reduce((acc, item) => (acc + item));
+    return s;
+  
+};
+console.log(sum([1.2, 4, -1]));
