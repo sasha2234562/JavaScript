@@ -1,0 +1,13 @@
+function XO(str) {
+  const lowerStr = str.toLowerCase(); // переводим строку в нижний регистр
+  let countX = 0;
+  let countO = 0;
+  for (let i = 0; i < lowerStr.length; i++) {
+    if (lowerStr[i] === 'x') {
+      countX++;
+    } else if (lowerStr[i] === 'o') {
+      countO++;
+    }
+  }
+  return countX === countO;
+}
